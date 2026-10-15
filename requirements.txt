@@ -1,0 +1,8 @@
+# Tested with torch 2.13, transformers 5.17, peft 0.21, vLLM 0.28, Python 3.11 (H200).
+torch>=2.7
+transformers>=4.56
+peft>=0.17
+vllm>=0.10
+numpy
+# Optional, for packed (unpadded) training; without either one train_kd.py uses padded micro-batches (same loss, slower):
+# flash-attn>=2.6        or, on Hopper GPUs:   kernels>=0.10   (fetches kernels-community/flash-attn3 from the HF hub)
